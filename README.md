@@ -1,59 +1,95 @@
-# AngularAssessment
+# Message Management Application
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.2.3.
+## Project Overview
+A simple Message Management application built using Angular. It allows users to add and edit messages through an interactive interface.
 
-## Development server
+## Technologies Used
+- Angular
+- TypeScript
+- HTML
+- CSS
+- Angular Router
+- FormsModule
 
-To start a local development server, run:
+## Features
+- Standalone Angular components
+- Home and Messages pages with routing
+- Navigation between pages
+- Injectable MessageService used within the Messages component
+- Message model using a TypeScript interface
+- Add and edit messages
+- Modern Angular control flow using `@if`, `@for`, `@switch`, and `@empty`
 
-```bash
-ng serve
+## Project Structure
+
+```text
+src/
+└── app/
+    ├── components/
+    │   ├── home/
+    │   └── messages/
+    ├── models/
+    │   └── message.model.ts
+    ├── services/
+    │   └── message.service.ts
+    ├── app.routes.ts
+    ├── app.config.ts
+    └── app.ts
+screenshots/
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## Installation and Setup
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+1. Clone the repository:
 
 ```bash
-ng generate component component-name
+git clone YOUR_GITHUB_REPOSITORY_URL
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+2. Navigate to the project folder:
 
 ```bash
-ng generate --help
+cd angular-assessment
 ```
 
-## Building
+3. Install dependencies:
 
-To build the project run:
+```bash
+npm install
+```
+
+4. Run the application:
+
+```bash
+ng serve -o
+```
+
+5. Open the application at:
+
+`http://localhost:4200/`
+
+## Build
+
+To build the application, run:
 
 ```bash
 ng build
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+## Screenshots
 
-## Running unit tests
+### Successful Build
+![Successful Angular build](screenshots/build-success.png)
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+### Control Flow in Action
+![Messages page showing message operations](screenshots/messages-control-flow.png)
 
-```bash
-ng test
-```
+### Home Page
+![Home page](screenshots/home-page.png)
 
-## Running end-to-end tests
+### Navigation to Messages Page
+![Messages page navigation](screenshots/messages-navigation.png)
 
-For end-to-end (e2e) testing, run:
+### Navigation to Home Page
+![Home page navigation](screenshots/home-navigation.png)
 
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.

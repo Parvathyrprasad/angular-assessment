@@ -1,0 +1,79 @@
+
+<div class="dashboard">
+
+  <section class="welcome-section">
+    <div>
+      <span class="tag">MESSAGE MANAGEMENT</span>
+      <h1>Welcome to Your Dashboard</h1>
+      <p>Manage, organize and keep track of all your messages in one place.</p>
+    </div>
+
+    <a routerLink="/messages" class="primary-btn">
+      + Add New Message
+    </a>
+  </section>
+
+  <section class="stats-grid">
+
+    <div class="stat-card">
+      <span class="stat-icon">✉</span>
+      <p>Total Messages</p>
+      <h2>{{ totalMessages }}</h2>
+      <small>All your messages</small>
+    </div>
+
+    <div class="stat-card">
+      <span class="stat-icon">✦</span>
+      <p>New Messages</p>
+      <h2>{{ newMessages }}</h2>
+      <small>Recently created</small>
+    </div>
+
+    <div class="stat-card">
+      <span class="stat-icon">✓</span>
+      <p>Updated Messages</p>
+      <h2>{{ updatedMessages }}</h2>
+      <small>Successfully edited</small>
+    </div>
+
+  </section>
+
+  <section class="recent-section">
+    <div class="section-heading">
+      <div>
+        <h2>Recent Messages</h2>
+        <p>Your latest message activity</p>
+      </div>
+
+      <a routerLink="/messages">View All →</a>
+    </div>
+
+    @if (recentMessages.length > 0) {
+      <div class="recent-list">
+        @for (message of recentMessages; track message.id) {
+          <div class="recent-card">
+            <div class="message-icon">✉</div>
+
+            <div class="message-details">
+              <h3>{{ message.text }}</h3>
+              <small>{{ message.createdAt | date:'medium' }}</small>
+            </div>
+
+            @if (message.status === 'New') {
+              <span class="status new-status">New</span>
+            } @else {
+              <span class="status updated-status">Updated</span>
+            }
+          </div>
+        }
+      </div>
+    } @else {
+      <div class="empty-state">
+        <h3>No messages yet</h3>
+        <p>Create your first message to see it here.</p>
+        <a routerLink="/messages" class="primary-btn">Create Message</a>
+      </div>
+    }
+  </section>
+
+</div>
