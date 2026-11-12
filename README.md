@@ -1,9 +1,11 @@
 # Message Management Application
 
 ## Project Overview
+
 A simple Message Management application built using Angular. It allows users to add and edit messages through an interactive interface.
 
 ## Technologies Used
+
 - Angular
 - TypeScript
 - HTML
@@ -12,10 +14,11 @@ A simple Message Management application built using Angular. It allows users to 
 - FormsModule
 
 ## Features
+
 - Standalone Angular components
 - Home and Messages pages with routing
 - Navigation between pages
-- Injectable MessageService used within the Messages component
+- Injectable MessageService used within the Messages component through dependency injection
 - Message model using a TypeScript interface
 - Add and edit messages
 - Modern Angular control flow using `@if`, `@for`, `@switch`, and `@empty`
@@ -43,7 +46,7 @@ screenshots/
 1. Clone the repository:
 
 ```bash
-git clone YOUR_GITHUB_REPOSITORY_URL
+git clone https://github.com/Parvathyrprasad/angular-assessment.git
 ```
 
 2. Navigate to the project folder:
@@ -76,20 +79,28 @@ To build the application, run:
 ng build
 ```
 
+The application builds successfully without errors.
+
 ## Screenshots
 
-### Successful Build
+### 1. Successful Angular Build
+
 ![Successful Angular build](screenshots/build-success.png)
 
-### Control Flow in Action
+### 2. Control Flow in Action
+
 ![Messages page showing message operations](screenshots/messages-control-flow.png)
 
-### Home Page
-![Home page](screenshots/home-page.png)
+### 3. Navigation to the Second Route
 
-### Navigation to Messages Page
 ![Messages page navigation](screenshots/messages-navigation.png)
 
-### Navigation to Home Page
-![Home page navigation](screenshots/home-navigation.png)
+### Additional Screenshots
 
+### Home Page
+
+![Home page](screenshots/home-page.png)
+
+### Navigation to Home Page
+
+![Home page navigation](screenshots/home-navigation.png)
